@@ -10,8 +10,7 @@ __pycache__/
 *.pyc
 
 # Ignore datasets or large files
-data/
-inventory.db
+data/inventory.db
 
 # Ignore secret files
 .env
