@@ -1,0 +1,18 @@
+# Ignore Python virtual environments
+venv/
+.env/
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore datasets or large files
+data/
+inventory.db
+
+# Ignore secret files
+.env
+config.json
