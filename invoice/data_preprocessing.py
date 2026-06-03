@@ -14,7 +14,7 @@ def load_invoice_data():
         COUNT(DISTINCT p.Brand) AS total_brands,
         SUM(p.Quantity) AS total_item_quantity,
         SUM(p.Dollars) AS total_items_dollars,
-        AVG(julianday(p.ReceivingDate))
+        AVG(julianday(p.ReceivingDate) - )
     )
     """
     
