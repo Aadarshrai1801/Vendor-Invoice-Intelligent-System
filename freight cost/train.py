@@ -1,6 +1,5 @@
 import joblib
 from pathlib import Path
-
 from data_preprocessing import load_vendor_invoice_data, prepare_features, split_data
 from model_evaluation import(
     train_linear_regressor,
@@ -11,8 +10,6 @@ from model_evaluation import(
 
 def main():
     db_path = "C:/Users/Aadarsh/Desktop/Vendor Invoice Intelligent System/data/inventory.db"
-    model_dir = Path("models")
-    model_dir.mkdir(exist_ok=True)
     
     # Load data
     df = load_vendor_invoice_data(db_path)
@@ -43,7 +40,7 @@ def main():
     }[best_model_name]
     
     # Save best model
-    model_path = model_dir / "model.pkl"
+    model_path = "C:/Users/Aadarsh/Desktop/Vendor Invoice Intelligent System/models/freight_model.pkl"
     joblib.dump(best_model, model_path)
     
     print(f"Best model saved: {best_model_name}")
