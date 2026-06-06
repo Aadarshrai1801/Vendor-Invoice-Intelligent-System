@@ -35,31 +35,35 @@ Project Architecture
 Vendor Invoice Intelligence System
 │
 ├── data/
-│   ├── raw/
-│   └── processed/
+│   ├── inventory.db/
 │
 ├── models/
-│   ├── predict.pkl
+│   ├── freight_model.pkl
+│   └── invoice_model.pkl
 │   └── scaler.pkl
 │
 ├── notebooks/
-│   ├── EDA.ipynb
-│   ├── Model_Training.ipynb
-│   └── Evaluation.ipynb
-│
-├── src/
+│   ├── freight_cost.ipynb
+│   └── invoice_flagging.ipynb
+├── invoice flagging/
 │   ├── data_preprocessing.py
-│   ├── feature_engineering.py
-│   ├── train_model.py
-│   ├── predict.py
-│   └── utils.py
+│   └── model_evaluation.py
+│   └── train.py
 │
-├── app/
-│   └── streamlit_app.py
+├── freight cost/
+│   ├── data_preprocessing.py
+│   └── model_evaluation.py
+│   └── train.py
 │
-├── requirements.txt
+├── inference/
+│   ├── predict_freight.py
+│   └── predict_invoice.py
+│
+├── app.py/
+│
 ├── README.md
 └── .gitignore
+
 Technologies Used
 Programming Language
 Python 3.x
@@ -137,7 +141,7 @@ ROC-AUC Score
 Confusion Matrix
 Installation
 Clone Repository
-git clone <https://github.com/your-username/vendor-invoice-intelligence-system.git>
+git clone <https://github.com/Aadarshrai1801/vendor-invoice-intelligence-system.git>
 
 cd vendor-invoice-intelligence-system
 Create Virtual Environment
